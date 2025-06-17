@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'fluffy_plushies_web_app';
+  protected title = 'Fluffy Plushies';
 }
