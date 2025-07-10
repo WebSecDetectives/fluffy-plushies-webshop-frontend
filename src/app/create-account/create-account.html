@@ -20,34 +20,38 @@
 <h1 class="d-flex d-flex-center">Register account</h1>
 <br><br>
 <div class="d-flex d-flex-justify-center d-flex-align-top">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="margin-right-50">
       <p>Username</p>
-      <input type="text" class=" input-field" placeholder="username" on>
+      <input type="text" class=" input-field" formControlName="username" placeholder="username">
       <p>Password</p>
-      <input type="text" class="input-field" placeholder="password">
-      <p>Repeat Password</p>
-      <input type="text" class="input-field" placeholder="confirm password">
+      <input type="password" class="input-field" formControlName="password" placeholder="password">
+      <!-- <p>Repeat Password</p>
+      <input type="text" class="input-field" formControlName="confirmPassword" placeholder="confirm password"> -->
       <p>Email</p>
-      <input type="text" class="input-field" placeholder="email@example.com">
+      <input type="text" class="input-field" formControlName="email" placeholder="email@example.com">
       <p>Phone Number</p>
-      <input type="text" class="input-field" placeholder="123-456-7890">
+      <input type="text" class="input-field" formControlName="phone" placeholder="123-456-7890">
     </div>
     <div>
- <p>Street</p>
-      <input type="text" class=" input-field" placeholder="username">
+      <p>Street</p>
+      <input type="text" class=" input-field" formControlName="street" placeholder="street">
       <p>City</p>
-      <input type="text" class="input-field" placeholder="city of residence">
+      <input type="text" class="input-field" formControlName="city" placeholder="city of residence">
+      <p>Postal code</p>
+      <input type="text" class="input-field" formControlName="postal_code" placeholder="postal code">
       <p>Country</p>
-      <input type="text" class="input-field" placeholder="country of residence">
-      <p>Upload image</p>
-      <input type="file" class="input-field" placeholder="profile image" style="width: 170px;">
+      <input type="text" class="input-field" formControlName="country" placeholder="country of residence">
+      <!-- <p>Upload image</p>
+      <input type="file" class="input-field" formControlName="profileImage" placeholder="profile image" style="width: 170px;"> -->
       <br><br><br><br>
       <br><br><br><br>
       <div>
-      <a href="" style="background-color: #E0C9E0;" class=" margin-right-20 login-button-anchor">Sign up</a>
-      <a href="" style="background-color: #F3ADE9;" class="login-button-anchor">Login</a>
+      <input type="submit" class="btn btn-primary margin-right-20" value="Create Account">
+      <a href="" style="background-color: #F3ADE9;" class="login-button-anchor">Cancel</a>
       </div>
     </div>
+  </form>
   </div>
   <footer></footer>
 </div>
