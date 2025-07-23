@@ -15,9 +15,5 @@ export const routes: Routes = [
   {
     path: 'update',
     component: UpdateAccount
-  },
-  {
-    path: 'update',
-    component: UpdateAccount
   }
 ];
