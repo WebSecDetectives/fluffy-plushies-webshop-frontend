@@ -20,7 +20,7 @@
 <h1 class="d-flex d-flex-center">Register account</h1>
 <br><br>
 <div class="d-flex d-flex-justify-center d-flex-align-top">
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registerForm" (submit)="onSubmit($event)">
     <div class="margin-right-50">
       <p>Username</p>
       <input type="text" class=" input-field" formControlName="username" placeholder="username">
@@ -41,9 +41,9 @@
       <p>Postal code</p>
       <input type="text" class="input-field" formControlName="postal_code" placeholder="postal code">
       <p>Country</p>
-      <input type="text" class="input-field" formControlName="country" placeholder="country of residence">
-      <!-- <p>Upload image</p>
-      <input type="file" class="input-field" formControlName="profileImage" placeholder="profile image" style="width: 170px;"> -->
+      <input type="text" class="input-field" formControlName="country" placeholder="country of residence" >
+      <p>Upload image</p>
+      <input type="file" class="input-field" formControlName="profileImage" placeholder="profile image" style="width: 170px;" (change)="onFileSelected($event)">
       <br><br><br><br>
       <br><br><br><br>
       <div>
