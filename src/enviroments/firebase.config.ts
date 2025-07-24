@@ -9,7 +9,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAxOtOdHiI5RHyP7UYAToaX3Ry0kjiBSQc",
   authDomain: "fluffy-plushies-webshop.firebaseapp.com",
   projectId: "fluffy-plushies-webshop",
-  storageBucket: "fluffy-plushies-webshop.firebasestorage.app",
+  storageBucket: "fluffy-plushies-webshop.appspot.com",
   messagingSenderId: "827529865010",
   appId: "1:827529865010:web:711fe366ec98902203992b",
   measurementId: "G-YEXEJZ9G6M"
