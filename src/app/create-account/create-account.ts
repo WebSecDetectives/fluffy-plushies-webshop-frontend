@@ -30,7 +30,7 @@ export class CreateAccount {
       postal_code: ['', Validators.required],
       city: ['', Validators.required],
       country: ['', Validators.required],
-      profileImage: ['', Validators.required]
+      image_url: [null]
     });
 
     // Optional: Redirect if not authenticated
@@ -60,9 +60,9 @@ export class CreateAccount {
       const path = `user/${this.selectedFile.name}`;
       const fileRef: StorageReference = ref(storage, path);
       try {
-        console.log('Image uploaded: ', fileRef);
         await uploadBytes(fileRef, this.selectedFile);
         this.imageUrl = await getDownloadURL(fileRef);
+        console.log('Image uploaded: ', fileRef);
       } catch (error) {
         console.error('Upload failed:', error);
         alert('Image upload failed. Please try again.');
@@ -83,7 +83,7 @@ export class CreateAccount {
         city: v.city,
         country: v.country
       },
-      profileImage: this.imageUrl
+      image_url: this.imageUrl
     };
 
     // 3) Call backend API
